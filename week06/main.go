@@ -1,5 +1,4 @@
 package main
-
 import (
 	"fmt"
 	"math"
@@ -10,13 +9,10 @@ import (
 func main() {
 	// Week 06: ここに課題のコードを記述してください
 	// 詳細な課題内容はLMSで確認してください
-
 	fmt.Println("Week 06 課題")
-
 	// 以下に実装してください
 	http.Handle("/", http.FileServer(http.Dir("public/")))
 	http.HandleFunc("/bmi", bmicaluculate)
-
 	fmt.Println("Launch server...")
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		fmt.Printf("Failed to launch server: %v", err)
