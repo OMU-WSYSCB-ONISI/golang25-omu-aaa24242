@@ -18,7 +18,6 @@ func main() {
 		fmt.Printf("Failed to launch server: %v", err)
 	}
 }
-
 func bmicaluculate(w http.ResponseWriter, r *http.Request) {
 	if err := r.ParseForm(); err != nil {
 		fmt.Println("errorだよ")

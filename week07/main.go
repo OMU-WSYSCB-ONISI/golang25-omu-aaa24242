@@ -1,25 +1,18 @@
 package main
-
 import (
 	"fmt"
 	"net/http"
 	"runtime"
 	"strconv"
 )
-
 func main() {
 	// Week 07: ここに課題のコードを記述してください
 	// 詳細な課題内容はLMSで確認してください
-
 	fmt.Println("Week 07 課題")
-
 	// 以下に実装してください
-
 	fmt.Printf("Go version: %s\n", runtime.Version())
-
 	http.Handle("/", http.FileServer(http.Dir("public/")))
 	http.HandleFunc("/cal02", calpmhandler2)
-
 	fmt.Println("Launch server...")
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		fmt.Printf("Failed to launch server: %v", err)
